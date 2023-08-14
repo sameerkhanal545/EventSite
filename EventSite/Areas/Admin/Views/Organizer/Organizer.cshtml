@@ -1,0 +1,45 @@
+﻿@model Organizer
+
+@{
+ 
+    var action = ViewContext.RouteData.Values["action"].ToString().Capitalize();
+
+    ViewData["Title"] = $" | {action} Category";
+}
+
+<h1>@action Organizer</h1>
+
+<form asp-action="@action" asp-area="Admin" method="post">
+
+    
+    <input type="hidden" asp-for="OrganizerId" />
+
+    @* Operation field needed by remote validation *@
+    <input type="hidden" name="Operation" value="@action" />
+
+    @if (Operation.IsDelete(action))
+    {
+        <div class="col-sm-4"><label>@Model.OrganizerName</label></div>
+        <input type="hidden" asp-for="OrganizerName" />
+     
+    }
+    else
+    {
+        <div class="form-group row">
+            <div class="col-sm-2"><label>Name:</label></div>
+            <div class="col-sm-4">
+                <input asp-for="@Model.OrganizerName" class="form-control" />
+            </div>
+            <div class="col-sm-6">
+                <span asp-validation-for="@Model.OrganizerName" class="text-danger"></span>
+            </div>
+        </div>
+    }
+
+    <div class="row">
+        <div class="col-sm-4 offset-sm-2">
+            <button type="submit">@action</button>
+            <a asp-action="Index" my-button>Cancel</a>
+        </div>
+    </div>
+</form>

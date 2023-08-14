@@ -1,0 +1,8 @@
+D:\conestoga\spring term\dot net\Ch15Bookstore\Ch15Bookstore\Bookstore\obj\Debug\net6.0\EventSite.csproj.AssemblyReference.cache
+D:\conestoga\spring term\dot net\Ch15Bookstore\Ch15Bookstore\Bookstore\obj\Debug\net6.0\EventSite.GeneratedMSBuildEditorConfig.editorconfig
+D:\conestoga\spring term\dot net\Ch15Bookstore\Ch15Bookstore\Bookstore\obj\Debug\net6.0\EventSite.AssemblyInfoInputs.cache
+D:\conestoga\spring term\dot net\Ch15Bookstore\Ch15Bookstore\Bookstore\obj\Debug\net6.0\EventSite.AssemblyInfo.cs
+D:\conestoga\spring term\dot net\Ch15Bookstore\Ch15Bookstore\Bookstore\obj\Debug\net6.0\EventSite.csproj.CoreCompileInputs.cache
+D:\conestoga\spring term\dot net\Ch15Bookstore\Ch15Bookstore\Bookstore\obj\Debug\net6.0\EventSite.MvcApplicationPartsAssemblyInfo.cache
+D:\conestoga\spring term\dot net\Ch15Bookstore\Ch15Bookstore\Bookstore\obj\Debug\net6.0\EventSite.RazorAssemblyInfo.cache
+D:\conestoga\spring term\dot net\Ch15Bookstore\Ch15Bookstore\Bookstore\obj\Debug\net6.0\EventSite.RazorAssemblyInfo.cs

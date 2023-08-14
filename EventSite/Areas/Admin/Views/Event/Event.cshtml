@@ -1,0 +1,128 @@
+﻿@model EventViewModel
+
+@{
+	// this view is used for add, edit, and delete.
+	// Which one is determined by the action method name.
+	var action = ViewContext.RouteData.Values["action"].ToString().Capitalize();
+
+	ViewData["Title"] = $" | {action} Event";
+}
+
+<h1>@action Event</h1>
+
+<form asp-action="@action" asp-area="Admin" method="post" enctype="multipart/form-data">
+
+	<input type="hidden" asp-for="Event.EventId" />
+
+	<div class="form-group row">
+		<div class="col-sm-2"><label>Title:</label></div>
+
+		@* if deleting, display title in a label and put value in hidden field
+		for delete message. Otherwise, provide a text box*@
+		@if (Operation.IsDelete(action))
+		{
+			<div class="col-sm-4"><label>@Model.Event.Title</label></div>
+			<input type="hidden" asp-for="Event.Title" />
+		}
+		else
+		{
+			<div class="col-sm-4">
+				<input asp-for="Event.Title" class="form-control" />
+			</div>
+			<div class="col-sm-6">
+				<span asp-validation-for="Event.Title" class="text-danger"></span>
+			</div>
+		}
+	</div>
+
+	@* if not deleting, display text boxes and drop-downs for rest of fields*@
+	@if (!Operation.IsDelete(action))
+	{
+		<div class="form-group row">
+			<div class="col-sm-2"><label>Price:</label></div>
+			<div class="col-sm-4">
+				<input asp-for="Event.Price" class="form-control" />
+			</div>
+			<div class="col-sm-6">
+				<span asp-validation-for="Event.Price" class="text-danger"></span>
+			</div>
+		</div>
+		<div class="form-group row">
+			<div class="col-sm-2"><label>Category:</label></div>
+			<div class="col-sm-4">
+				<select asp-for="Event.CategoryId" class="form-control"
+					asp-items='@(new SelectList(Model.Categories, "CategoryId", "Name", Model.Event.CategoryId))'>
+				</select>
+			</div>
+			<div class="col-sm-6">
+				<span asp-validation-for="Event.CategoryId" class="text-danger"></span>
+			</div>
+		</div>
+		<div class="form-group row">
+			<div class="col-sm-2">
+				<label>Organizer(s):</label><br />
+			</div>
+			<div class="col-sm-4">
+				<select asp-for="SelectedOrganizers" class="form-control"
+					asp-items='@(new MultiSelectList(Model.Organizers, "OrganizerId", "OrganizerName", Model.SelectedOrganizers))'>
+				</select>
+				(Hold down CTRL or CMD key to select multiple)
+			</div>
+			<div class="col-sm-6">
+				<span asp-validation-for="SelectedOrganizers" class="text-danger"></span>
+			</div>
+		</div>
+
+		<div class="form-group row">
+			<div class="col-sm-2"><label>Description:</label></div>
+			<div class="col-sm-10">
+				<textarea asp-for="Event.Description" class="form-control" rows="3"></textarea>
+			</div>
+		</div>
+		<div class="form-group row">
+			<div class="col-sm-2"><label>Location:</label></div>
+			<div class="col-sm-10">
+				<input asp-for="Event.Location" class="form-control" />
+			</div>
+		</div>
+		<div class="form-group row">
+			<div class="col-sm-2"><label>Event Date and Time:</label></div>
+			<div class="col-sm-4">
+				<input asp-for="Event.EventDate" class="form-control" type="datetime-local" value="@Model.Event.EventDate.ToString("yyyy-MM-ddTHH:mm")" />
+			</div>
+			<div class="col-sm-6">
+				<span asp-validation-for="Event.EventDate" class="text-danger"></span>
+			</div>
+		</div>
+		<div class="form-group row">
+			<div class="col-sm-2"><label>Event End Date and Time:</label></div>
+			<div class="col-sm-4">
+				<input asp-for="Event.EventDate" class="form-control" type="datetime-local" value="@Model.Event.EventEndDate.ToString("yyyy-MM-ddTHH:mm")" />
+			</div>
+			<div class="col-sm-6">
+				<span asp-validation-for="Event.EventEndDate" class="text-danger"></span>
+			</div>
+		</div>
+
+
+		<div class="form-group row">
+			<div class="col-sm-2"><label>Image:</label></div>
+			<div class="col-sm-4">
+				<input type="file" asp-for="ImageFile" class="form-control" />
+			</div>
+			<div class="col-sm-6">
+				<span asp-validation-for="ImageFile" class="text-danger"></span>
+			</div>
+		</div>
+
+	}
+	<div class="row">
+		<div class="col-sm-4 offset-sm-2">
+			<button type="submit" class="btn btn-primary">@action</button>
+
+			@* return user to main admin page after add, or to search page otherwise *@
+			<a asp-action="@(Operation.IsAdd(action) ? "Index" : "Search")"
+			   my-button>Cancel</a>
+		</div>
+	</div>
+</form>

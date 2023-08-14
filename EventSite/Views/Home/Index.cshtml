@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Event>
+
+    <div class="text-center">
+        <h1>Upcoming events</h1>
+	<div class="row">
+         @foreach (Event evt in Model)
+	{
+		<div class="col-md-4 mb-4">
+			<div class="card rounded shadow">
+				<a asp-action="Details" asp-controller="Event"
+			   asp-route-id="@evt.EventId" asp-route-slug="@evt.Title.Slug()">
+					@if (!string.IsNullOrEmpty(evt.ImagePath))
+					{
+						<img src="@Url.Content("~/uploads/" + evt.ImagePath)" class="card-img-top custom-img" alt="Event Image">
+					}
+					else
+					{
+						<img src="~/uploads/events.jpg" class="card-img-top custom-img" alt="Default Event Image">
+					}
+				</a>
+				<div class="card-body text-center">
+					<h5 class="card-title">
+						<partial name="_EventLinkPartial" model="@evt" />
+					</h5>
+					<p class="card-text">
+						@foreach (var ba in evt.EventOrganizers)
+						{
+							<partial name="_OrganizerLinkPartial" model="@ba.Organizer" />
+							<br />
+						}
+					</p>
+					<p class="card-text">
+						Category: @evt.Category?.Name
+					</p>
+					<p class="card-text">
+						Price: @evt.Price.ToString("c")
+					</p>
+				</div>
+			</div>
+		</div>
+	}
+	</div>
+    </div>

@@ -1,0 +1,132 @@
+﻿@model CartViewModel
+
+@{
+	ViewData["Title"] = " | Cart";
+}
+
+<h1>Your Cart</h1>
+
+<form asp-action="Clear" method="post">
+	<ul class="list-group mb-4">
+		<li class="list-group-item">
+			<div class="row">
+				<div class="col">
+					Subtotal: @Model.SubTotal.ToString("c")
+				</div>
+				<div class="col">
+					<div class="float-right">
+						<a asp-action="Checkout" asp-controller="Order" my-button>Checkout</a>
+						<button type="submit">Clear Cart</button>
+						<a asp-action="List" asp-controller="Event"
+						   asp-all-route-data="@Model.EventGridRoute">Back to Shopping</a>
+					</div>
+
+				</div>
+			</div>
+		</li>
+	</ul>
+</form>
+<table class="table">
+	<thead class="thead-dark">
+		<tr>
+			<th>Image</th>
+			<th>Title</th>
+			<th>Organizer(s)</th>
+			<th>Price</th>
+			<th>Quantity</th>
+			<th>Subtotal</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (CartItem item in Model.List)
+		{
+			@* don't use link partial views here bc cart objects are EventDTO and dictionary<int, string>, not book and author *@
+			<tr>
+				<td>
+					@if (!string.IsNullOrEmpty(item.Event.ImagePath))
+					{
+						<img src="@Url.Content("~/uploads/" + item.Event.ImagePath)" alt="Event Image" height="125" width="125">
+					}
+					else
+					{
+						<img src="~/uploads/events.jpg" alt="Default Event Image" height="125" width="125">
+					}
+				</td>
+				<td>
+					<a asp-action="Details" asp-controller="Event"
+				   asp-route-id="@item.Event.EventId"
+				   asp-route-slug="@item.Event.Title.Slug()">
+						@item.Event.Title
+					</a>
+				</td>
+				<td>
+
+					@foreach (var keyValuePair in item.Event.Organizers)
+					{
+						<p>
+							<a asp-action="Details" asp-controller="Organizer"
+					   asp-route-id="@keyValuePair.Key"
+					   asp-route-slug="@keyValuePair.Value.Slug()">
+								@keyValuePair.Value
+							</a>
+						</p>
+					}
+				</td>
+				<td>@item.Event.Price.ToString("c")</td>
+				<td>
+				 <div class="float-right">
+                        <form asp-action="Edit" method="post" class="edit-form">
+                            <div class="input-group">
+								<button type="button" class="decrease-quantity btn btn-info" onclick="decreaseQuantity(@item.Id)">
+                                    <i class="bi bi-dash-circle-fill"></i>
+                                </button>
+								<input class="form-control text-center cart-quantity" type="number" id="quantity_@item.Id" asp-for="@item.Quantity name=" quantity" value="@item.Quantity" min="1" />
+                                <input type="hidden" asp-for="@item.Event.EventId" />
+								<input type="hidden" asp-for="@item.Id" />
+
+                                <input type="hidden" asp-for="@item.Event.Title" />
+                                <button type="button" class="increase-quantity btn btn-info" onclick="increaseQuantity(@item.Id)">
+                                    <i class="bi bi-plus-circle-fill"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+				</td>
+				<td>@item.SubTotal.ToString("c")</td>
+				<td>
+					<div class="float-right">
+						@* <a asp-action="Edit" asp-controller="Cart"
+					asp-route-id="@item.Event.EventId"
+					asp-route-slug="@item.Event.Title.Slug()"
+					my-button>Edit</a>*@
+						<form asp-action="Remove" method="post">
+							<button type="submit" name="id" value="@item.Id">
+								Remove
+							</button>
+						</form>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
+<script>
+   function decreaseQuantity(itemId) {
+        var quantityInput = $("#quantity_" + itemId);
+        var currentQuantity = parseInt(quantityInput.val());
+        if (currentQuantity > 1) {
+            quantityInput.val(currentQuantity - 1);
+			var form = $(event.target).closest("form");
+			form.submit();
+        }
+    }
+
+    function increaseQuantity(itemId) {
+        var quantityInput = $("#quantity_" + itemId);
+        var currentQuantity = parseInt(quantityInput.val());
+        quantityInput.val(currentQuantity + 1);
+		console.log("test", currentQuantity+1);
+		var form = $(event.target).closest("form");
+		form.submit();
+    }
+</script>

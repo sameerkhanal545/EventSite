@@ -1,0 +1,49 @@
+﻿@model LoginViewModel
+@{
+    ViewBag.Title = "Login";
+}
+
+<div class="d-flex justify-content-center align-items-center">
+    <form method="post" asp-action="LogIn" asp-route-returnUrl="@Model.ReturnUrl" class="col-md-6">
+        <h2 class="text-center">Login</h2>
+
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Username:</label>
+            <div class="col-sm-10">
+                <input type="text" asp-for="Username" class="form-control" />
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Password:</label>
+            <div class="col-sm-10">
+                <input type="password" asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="offset-sm-2 col-sm-10">
+                <div class="form-check">
+                    <input type="checkbox" asp-for="RememberMe" class="form-check-input" />
+                    <label class="form-check-label" asp-for="RememberMe">Remember Me</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary">Log In</button>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="offset-2 col-sm-10">
+                Not registered? <a asp-action="Register">Register as a new user</a>
+            </div>
+        </div>
+    </form>
+</div>

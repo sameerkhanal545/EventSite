@@ -1,0 +1,29 @@
+﻿@model OrderDetailsViewModel
+
+<h2>Order Details</h2>
+
+<div class="order-summary">
+    <h3>Order Summary</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Event</th>
+                <th>Quantity</th>
+                <th>Unit Price</th>
+                <th>Total Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var detail in Model.OrderDetails)
+            {
+                    <tr>
+                        <td>@detail.Event.Title</td>
+                        <td>@detail.Quantity</td>
+                        <td>@detail.UnitPrice</td>
+                        <td>@(detail.Quantity * detail.UnitPrice)</td>
+                    </tr>
+            }
+        </tbody>
+    </table>
+    <p>Total: @Model.OrderTotal</p>
+</div>

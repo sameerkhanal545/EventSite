@@ -1,0 +1,24 @@
+﻿@model Organizer
+
+@{
+    ViewData["Title"] = " | Organizer";
+}
+
+<h1>Organizer</h1>
+
+<table class="table table-bordered table-sm">
+    <thead>
+        <tr class="thead-dark">
+            <th>@Model.OrganizerName</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @foreach (var ba in Model.EventOrganizers) {
+                    <p><partial name="_EventLinkPartial" model="@ba.Event" /></p>
+                }
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,46 @@
+﻿@model Event
+
+@{
+	ViewData["Title"] = " | Event Details";
+}
+
+<h1>Event Details</h1>
+
+<div class="row">
+	<div class="col-md-4 d-flex justify-content-center">
+		@if (!string.IsNullOrEmpty(Model.ImagePath))
+		{
+			<img src="@Url.Content("~/uploads/" + Model.ImagePath)" alt="Event Image" class="img-fluid" />
+		}else
+		{
+			<img src="~/uploads/events.jpg" alt="Event Image" class="img-fluid" />
+
+		}
+	</div>
+
+	<div class="col-md-8">
+		<h2>@Model.Title</h2>
+		<p>
+			@foreach (EventOrganizer ba in Model.EventOrganizers)
+			{
+				<partial name="_OrganizerLinkPartial" model="@ba.Organizer" />
+				<br />
+			}
+		</p>
+		<p>Price: @Model.Price.ToString("c")</p>
+		<p>Category: @Model.Category.Name</p>
+		<p>Description: @Model.Description</p>
+		<p>Location: @Model.Location</p>
+		<p>Event Date: @Model.EventDate.ToString("MM/dd/yyyy") - @Model.EventEndDate.ToString("MM/dd/yyyy")</p>
+
+		@if (!User.IsInRole("Admin"))
+		{
+			<form asp-action="Add" asp-controller="Cart" method="post">
+				<button type="submit" name="id" value="@Model.EventId" class="btn btn-primary">
+					Add To Cart
+				</button>
+			</form>
+		}
+	</div>
+</div>
+

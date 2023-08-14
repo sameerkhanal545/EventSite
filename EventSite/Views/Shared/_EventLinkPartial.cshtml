@@ -1,0 +1,7 @@
+﻿@model Event
+
+<a asp-action="Details" asp-controller="Event" asp-area="" 
+    asp-route-id="@Model.EventId"
+    asp-route-slug="@Model.Title.Slug()">
+    @Model.Title
+</a>

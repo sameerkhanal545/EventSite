@@ -1,0 +1,7 @@
+﻿@model Organizer
+
+<a asp-action="Details" asp-controller="Organizer" asp-area=""
+    asp-route-id="@Model.OrganizerId"
+    asp-route-slug="@Model.OrganizerName.Slug()">
+    @Model.OrganizerName
+</a>

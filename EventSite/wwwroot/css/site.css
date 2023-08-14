@@ -1,0 +1,35 @@
+﻿h1 {
+    font-size: 1.75em;
+}
+
+.jumbotron {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: #200154;
+}
+
+.input-validation-error {
+    border: 2px solid #dc3545;  
+    background-color: #faebd7;  
+}
+.custom-img {
+    width: 350px; 
+    height: 350px; 
+    object-fit: cover; 
+}
+
+.cart-quantity {
+    width: 3.8rem;
+    height: 2.5rem;
+}
+.custom-navmenu {
+    background-color : #9e71e9ba;
+    color:#000000;
+}
+.custom-link {
+    color: black; 
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgb(0 0 0 / 84%);
+}
