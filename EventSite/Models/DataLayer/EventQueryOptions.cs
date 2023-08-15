@@ -10,12 +10,12 @@ namespace EventSite.Models
                 Where = b => b.CategoryId == builder.CurrentRoute.CategoryFilter;
             }
             if (builder.IsFilterByPrice) {
-                if (builder.CurrentRoute.PriceFilter == "under7")
-                    Where = b => b.Price < 7;
-                else if (builder.CurrentRoute.PriceFilter == "7to14")
-                    Where = b => b.Price >= 7 && b.Price <= 14;
+                if (builder.CurrentRoute.PriceFilter == "under10")
+                    Where = b => b.Price < 10;
+                else if (builder.CurrentRoute.PriceFilter == "10to20")
+                    Where = b => b.Price >= 10 && b.Price <= 20;
                 else
-                    Where = b => b.Price > 14;
+                    Where = b => b.Price > 20;
             }
             if (builder.IsFilterByOrganizer) {
                 int id = builder.CurrentRoute.OrganizerFilter.ToInt();

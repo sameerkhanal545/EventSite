@@ -88,7 +88,7 @@
 		<div class="form-group row">
 			<div class="col-sm-2"><label>Event Date and Time:</label></div>
 			<div class="col-sm-4">
-				<input asp-for="Event.EventDate" class="form-control" type="datetime-local" value="@Model.Event.EventDate.ToString("yyyy-MM-ddTHH:mm")" />
+				<input asp-for="Event.EventDate" class="form-control" type="datetime-local" value="@((Model.Event != null) ? Model.Event.EventDate.ToString("yyyy-MM-ddTHH:mm") : DateTime.Now.ToString("yyyy-MM-ddTHH:mm"))" />
 			</div>
 			<div class="col-sm-6">
 				<span asp-validation-for="Event.EventDate" class="text-danger"></span>
@@ -97,7 +97,8 @@
 		<div class="form-group row">
 			<div class="col-sm-2"><label>Event End Date and Time:</label></div>
 			<div class="col-sm-4">
-				<input asp-for="Event.EventDate" class="form-control" type="datetime-local" value="@Model.Event.EventEndDate.ToString("yyyy-MM-ddTHH:mm")" />
+				<input asp-for="Event.EventEndDate" class="form-control" type="datetime-local"
+				   value="@((Model.Event != null) ? Model.Event.EventEndDate.ToString("yyyy-MM-ddTHH:mm:ss") : DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss"))" />
 			</div>
 			<div class="col-sm-6">
 				<span asp-validation-for="Event.EventEndDate" class="text-danger"></span>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Sw0ASnT9wO6MeiaGOnB1WymxtJnfhDacfYAPNo4UzuQ=",
+  "Hash": "1IJMHe6JI49oyix1/87xa/tyFUWBNtse/eDvpp98DKE=",
   "Source": "EventSite",
   "BasePath": "_content/EventSite",
   "Mode": "Default",
@@ -680,6 +680,23 @@
       "OriginalItemSpec": "wwwroot\\uploads\\70f664da-f83f-4921-958e-43a69605f5b0_icons8-delete-user-99.png"
     },
     {
+      "Identity": "D:\\conestoga\\spring term\\dot net\\EventSite Group Project\\EventSite\\EventSite\\wwwroot\\uploads\\bf6cf08d-d7c0-4c62-bede-3a005126876d_event-bg.png",
+      "SourceId": "EventSite",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\conestoga\\spring term\\dot net\\EventSite Group Project\\EventSite\\EventSite\\wwwroot\\",
+      "BasePath": "_content/EventSite",
+      "RelativePath": "uploads/bf6cf08d-d7c0-4c62-bede-3a005126876d_event-bg.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\bf6cf08d-d7c0-4c62-bede-3a005126876d_event-bg.png"
+    },
+    {
       "Identity": "D:\\conestoga\\spring term\\dot net\\EventSite Group Project\\EventSite\\EventSite\\wwwroot\\uploads\\c8ac2957-9e87-498a-957d-1c5686784977_icons8-delete-user-99.png",
       "SourceId": "EventSite",
       "SourceType": "Discovered",
@@ -695,6 +712,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\c8ac2957-9e87-498a-957d-1c5686784977_icons8-delete-user-99.png"
+    },
+    {
+      "Identity": "D:\\conestoga\\spring term\\dot net\\EventSite Group Project\\EventSite\\EventSite\\wwwroot\\uploads\\e61f3ec7-5387-4c08-beae-fea142fa16cb_events.jpg",
+      "SourceId": "EventSite",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\conestoga\\spring term\\dot net\\EventSite Group Project\\EventSite\\EventSite\\wwwroot\\",
+      "BasePath": "_content/EventSite",
+      "RelativePath": "uploads/e61f3ec7-5387-4c08-beae-fea142fa16cb_events.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\e61f3ec7-5387-4c08-beae-fea142fa16cb_events.jpg"
     },
     {
       "Identity": "D:\\conestoga\\spring term\\dot net\\EventSite Group Project\\EventSite\\EventSite\\wwwroot\\uploads\\events.jpg",

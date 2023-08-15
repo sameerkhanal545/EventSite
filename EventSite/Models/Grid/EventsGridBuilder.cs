@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
 using System;
 
 namespace EventSite.Models
@@ -16,9 +17,9 @@ namespace EventSite.Models
             routes.PriceFilter = (isInitial) ? FilterPrefix.Price + values.Price : values.Price;
         }
 
-        public void LoadFilterSegments(string[] filter, Event events)
+        public void LoadFilterSegments(string[] filter, Organizer organizer)
         {
-            if (events == null) { 
+            if (organizer == null) { 
                 routes.OrganizerFilter = FilterPrefix.Organizer + filter[0];
             } else {
                 routes.OrganizerFilter = FilterPrefix.Organizer + filter[0]
@@ -28,16 +29,6 @@ namespace EventSite.Models
             routes.PriceFilter = FilterPrefix.Price + filter[2];
         }
         public void ClearFilterSegments() => routes.ClearFilters();
-
-		internal void LoadFilterSegments(string[] filter, Organizer organizer)
-		{
-			throw new NotImplementedException();
-		}
-
-		internal void LoadFilterSegments(string[] filter, object author)
-		{
-			throw new NotImplementedException();
-		}
 
 		string def = EventsGridDTO.DefaultFilter;   
         public bool IsFilterByOrganizer => routes.OrganizerFilter != def;

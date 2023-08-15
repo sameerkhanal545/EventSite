@@ -28,7 +28,38 @@
                        asp-for="Type" value="category">Category
             </label>
             <button type="submit" class="ml-2 mr-2">Find</button>
+            <button type="button" class="ml-2 mr-2 btn btn-warning" onclick="window.location.href = '@Url.Action("Index", "Event")'">Reset</button>
             <span asp-validation-for="SearchTerm" class="text-danger"></span>
         </form>
+
     </li>
 </ul>
+
+ <table class="table table-bordered table-striped table-sm">
+      <thead>
+        <tr><th>Title</th><th>Category</th><th>Organizer</th><th></th></tr>
+    </thead>
+    <tbody>
+        @foreach (var evt in Model.Events) {
+        <tr>
+            <td>
+                <partial name="_EventLinkPartial" model="@evt" />
+            </td>
+            <td>@evt.Category.Name</td>
+            <td>
+                @foreach(EventOrganizer ba in evt.EventOrganizers) {
+                    <div><partial name="_OrganizerLinkPartial" model="@ba.Organizer" /></div>
+                }
+            </td>
+            <td>
+                <div class="float-right">
+                    <a asp-action="Edit" asp-route-id="@evt.EventId"
+                       my-button>Edit</a>
+                        <a asp-action="Delete" asp-route-id="@evt.EventId"
+                       my-button>Delete</a>
+                </div>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

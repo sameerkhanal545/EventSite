@@ -15,7 +15,10 @@
     </div>
 </div>
 
-<table class="table">
+<table class="table table-bordered table-striped table-sm">
+    <thead>
+        <tr><th>Title</th><th>Category</th><th></th></tr>
+    </thead>
     <tbody>
         @foreach (var book in Model.Events) {
         <tr>

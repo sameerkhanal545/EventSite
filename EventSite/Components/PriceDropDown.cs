@@ -12,9 +12,9 @@ namespace EventSite.Components
                 SelectedValue = selectedValue,
                 DefaultValue = EventsGridDTO.DefaultFilter,
                 Items = new Dictionary<string, string> {
-                    { "under7", "Under $7" },
-                    { "7to14", "$7 to $14" },
-                    { "over14", "Over $14" }
+                    { "under10", "Under $10" },
+                    { "10to20", "$10 to $20" },
+                    { "over20", "Above $20" }
                 }
             };
 

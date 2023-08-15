@@ -11,10 +11,10 @@ namespace EventSite.Areas.Admin.Controllers
 
         public ViewResult Index()
         {
-            var authors = data.List(new QueryOptions<Organizer> {
+            var organizers = data.List(new QueryOptions<Organizer> {
                 OrderBy = a => a.OrganizerName
             });
-            return View(authors);
+            return View(organizers);
         }
 
         public RedirectToActionResult Select(int id, string operation)

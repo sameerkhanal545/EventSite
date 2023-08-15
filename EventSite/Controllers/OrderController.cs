@@ -115,7 +115,7 @@ namespace EventSite.Controllers
                 ClearCartItems(userManager.GetUserId(User));
 
                 TempData["message"] = $"Order Succefully Created";
-                return RedirectToAction("OrderConfirmation", new { orderId = order.OrderId });
+                return RedirectToAction("OrderDetails", new { id = order.OrderId });
             }
 
             var checkoutViewModel = GetUsersOrderDetails();
