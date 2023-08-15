@@ -60,7 +60,7 @@ namespace EventSite.Models
         {
             // Check if an admin user already exists
             var adminUser = await userManager.FindByNameAsync("admin");
-
+            Console.WriteLine(adminUser);
             if (adminUser == null)
             {
                 // Create a new admin user

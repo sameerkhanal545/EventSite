@@ -33,3 +33,21 @@
 .navbar-dark .navbar-nav .nav-link {
     color: rgb(0 0 0 / 84%);
 }
+
+
+.kanban {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.box{
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 0 10px;
+    min-width: 200px;
+    max-width:200px;
+    background-color: #f9f9f9;
+    margin: 10px;
+}
