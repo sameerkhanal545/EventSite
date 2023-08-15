@@ -5,38 +5,22 @@
 
 <h1>Organizer Catalog</h1>
 
-<table class="table table-bordered table-striped table-sm">
-    <thead class="thead-dark">
-        <tr>
-            <th>
-                <my-sorting-link sort-field="@nameof(Organizer.OrganizerName)"
-                    current="@Model.CurrentRoute">Organizer Name</my-sorting-link>
-            </th>
-          
-            <th>Events(s)</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (Organizer organizer in Model.Items) {
-        <tr>
-            @* don't use author link partial views here bc need to have different inner html (first or last name) *@
-            <td>
-                <a asp-action="Details" asp-route-id="@organizer.OrganizerId"
-                   asp-route-slug="@organizer.OrganizerName.Slug()">
-                    @organizer.OrganizerName
-                </a>
-            </td>
-          
-            <td>
-                @foreach (var ba in organizer.EventOrganizers) {
-                <p>
-                    <partial name="_EventLinkPartial" model="@ba.Event" />
-                </p>
-                }
-            </td>
-        </tr>
-        }
-    </tbody>
-</table>
+<div class="kanban">
+    @foreach (Organizer organizer in Model.Items)
+    {
+        <div class="box">
+            <h6>Organizer :</h6><h3>@organizer.OrganizerName</h3>
+            <h6>Events:</h6>
+            @foreach (var ba in organizer.EventOrganizers)
+            {
+                <div class="">
+                    <p>
+                        <partial name="_EventLinkPartial" model="@ba.Event" />
+                    </p>
+                </div>
+            }
+        </div>
+    }
+</div>
 
 <partial name="_PagingLinksPartial" />
