@@ -1,10 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using EventSite.Models;
+using Microsoft.AspNetCore.Authorization;
+using System.Data;
 
 namespace EventSite.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class OrganizerController : Controller
+	[Authorize(Roles = "Admin")]
+	public class OrganizerController : Controller
     {
         private Repository<Organizer> data { get; set; }
         public OrganizerController(EventSiteContext ctx) => data = new Repository<Organizer>(ctx);

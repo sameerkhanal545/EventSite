@@ -1,11 +1,9 @@
 ﻿@model OrderDetailsViewModel
 
-<h2>Order Details</h2>
-
 <div class="order-summary">
     <h3>Order Summary</h3>
-    <table class="table">
-        <thead>
+    <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
             <tr>
                 <th>Event</th>
                 <th>Quantity</th>
@@ -16,14 +14,19 @@
         <tbody>
             @foreach (var detail in Model.OrderDetails)
             {
-                    <tr>
-                        <td>@detail.Event.Title</td>
-                        <td>@detail.Quantity</td>
-                        <td>@detail.UnitPrice</td>
-                        <td>@(detail.Quantity * detail.UnitPrice)</td>
-                    </tr>
+                <tr>
+                    <td>@detail.Event.Title</td>
+                    <td>@detail.Quantity</td>
+                    <td>@detail.UnitPrice.ToString("c")</td>
+                    <td>$@(detail.Quantity * detail.UnitPrice)</td>
+                </tr>
             }
         </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="3" class="text-right">Total:</th>
+                <th>@Model.OrderTotal.ToString("c")</th>
+            </tr>
+        </tfoot>
     </table>
-    <p>Total: @Model.OrderTotal</p>
 </div>

@@ -7,11 +7,13 @@ using System;
 using Microsoft.AspNetCore.Hosting;
 using Newtonsoft.Json.Linq;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Authorization;
 
 namespace EventSite.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class EventController : Controller
+	[Authorize(Roles = "Admin")]
+	public class EventController : Controller
     {
         private readonly IWebHostEnvironment hostingEnvironment;
         private readonly IEventSiteUnitOfWork data;
@@ -112,7 +114,22 @@ namespace EventSite.Areas.Admin.Controllers
             }
             else
             {
-                return View("Index");
+				var options = new EventQueryOptions
+				{
+					Includes = "EventOrganizers.Organizer, Category",
+					OrderByDirection = "asc",
+					PageNumber = 1,
+					PageSize = 5
+				};
+				var latestEvents = data.Events
+			  .List(options)
+			  .ToList();
+
+				var SearchViewModel = new SearchViewModel
+				{
+					Events = latestEvents,
+				};
+				return View("Index", SearchViewModel);
             }
         }
 

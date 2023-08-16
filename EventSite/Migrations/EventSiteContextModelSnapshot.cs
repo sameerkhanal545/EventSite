@@ -267,7 +267,7 @@ namespace EventSite.Migrations
                             CategoryId = "music",
                             Description = "Music Event",
                             EventDate = new DateTime(2023, 8, 15, 18, 30, 0, 0, DateTimeKind.Unspecified),
-                            EventEndDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            EventEndDate = new DateTime(2023, 8, 15, 18, 30, 0, 0, DateTimeKind.Unspecified),
                             ImagePath = "",
                             Location = "Main Concert Hall",
                             Price = 18.0,
@@ -279,7 +279,7 @@ namespace EventSite.Migrations
                             CategoryId = "arts",
                             Description = "Art Exhibition",
                             EventDate = new DateTime(2023, 8, 20, 10, 0, 0, 0, DateTimeKind.Unspecified),
-                            EventEndDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            EventEndDate = new DateTime(2023, 8, 15, 18, 30, 0, 0, DateTimeKind.Unspecified),
                             ImagePath = "",
                             Location = "Gallery 3",
                             Price = 5.5,
@@ -291,7 +291,7 @@ namespace EventSite.Migrations
                             CategoryId = "foods",
                             Description = "Culinary Adventure",
                             EventDate = new DateTime(2023, 8, 25, 16, 0, 0, 0, DateTimeKind.Unspecified),
-                            EventEndDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            EventEndDate = new DateTime(2023, 8, 15, 18, 30, 0, 0, DateTimeKind.Unspecified),
                             ImagePath = "",
                             Location = "Downtown Square",
                             Price = 4.5,
@@ -303,7 +303,7 @@ namespace EventSite.Migrations
                             CategoryId = "sports",
                             Description = "Cricket Match",
                             EventDate = new DateTime(2023, 8, 28, 14, 0, 0, 0, DateTimeKind.Unspecified),
-                            EventEndDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            EventEndDate = new DateTime(2023, 8, 15, 18, 30, 0, 0, DateTimeKind.Unspecified),
                             ImagePath = "",
                             Location = "City Cricket Stadium",
                             Price = 11.5,
@@ -315,7 +315,7 @@ namespace EventSite.Migrations
                             CategoryId = "fashion",
                             Description = "Runway Extravaganza",
                             EventDate = new DateTime(2023, 9, 5, 20, 0, 0, 0, DateTimeKind.Unspecified),
-                            EventEndDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            EventEndDate = new DateTime(2023, 8, 15, 18, 30, 0, 0, DateTimeKind.Unspecified),
                             ImagePath = "",
                             Location = "Grand Ballroom",
                             Price = 10.99,
@@ -386,37 +386,37 @@ namespace EventSite.Migrations
                         new
                         {
                             OrganizerId = 1,
-                            OrganizerName = "Michelle"
+                            OrganizerName = "KW Inc"
                         },
                         new
                         {
                             OrganizerId = 2,
-                            OrganizerName = "Stephen E."
+                            OrganizerName = "Peters Events"
                         },
                         new
                         {
                             OrganizerId = 3,
-                            OrganizerName = "Margaret"
+                            OrganizerName = "Jane Management"
                         },
                         new
                         {
                             OrganizerId = 4,
-                            OrganizerName = "Jane"
+                            OrganizerName = "Quic Events Inc"
                         },
                         new
                         {
                             OrganizerId = 5,
-                            OrganizerName = "James"
+                            OrganizerName = "Total Inc"
                         },
                         new
                         {
                             OrganizerId = 6,
-                            OrganizerName = "Emily"
+                            OrganizerName = "Samy Inc"
                         },
                         new
                         {
                             OrganizerId = 7,
-                            OrganizerName = "Agatha"
+                            OrganizerName = "Petty Inc"
                         });
                 });
 

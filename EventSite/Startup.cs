@@ -87,7 +87,7 @@ namespace EventSite
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}/{slug?}");
             });
-            EventSiteContext.CreateAdminUser(userManager, roleManager).Wait();
+            //EventSiteContext.CreateAdminUser(userManager, roleManager).Wait();
 
         }
     }

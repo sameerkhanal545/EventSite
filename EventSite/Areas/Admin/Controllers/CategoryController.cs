@@ -1,10 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using EventSite.Models;
+using Microsoft.AspNetCore.Authorization;
+using System.Data;
 
 namespace EventSite.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class CategoryController : Controller
+	[Authorize(Roles = "Admin")]
+	public class CategoryController : Controller
     {
         private Repository<Category> data { get; set; }
         public CategoryController(EventSiteContext ctx) => data = new Repository<Category>(ctx);

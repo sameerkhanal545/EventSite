@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Semster4\\Advance Net\\Project\\EventSite\\EventSite\\EventSite.csproj": {}
+    "D:\\conestoga\\spring term\\dot net\\EventSite Group Project\\EventSite\\EventSite\\EventSite.csproj": {}
   },
   "projects": {
-    "E:\\Semster4\\Advance Net\\Project\\EventSite\\EventSite\\EventSite.csproj": {
+    "D:\\conestoga\\spring term\\dot net\\EventSite Group Project\\EventSite\\EventSite\\EventSite.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Semster4\\Advance Net\\Project\\EventSite\\EventSite\\EventSite.csproj",
+        "projectUniqueName": "D:\\conestoga\\spring term\\dot net\\EventSite Group Project\\EventSite\\EventSite\\EventSite.csproj",
         "projectName": "EventSite",
-        "projectPath": "E:\\Semster4\\Advance Net\\Project\\EventSite\\EventSite\\EventSite.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "E:\\Semster4\\Advance Net\\Project\\EventSite\\EventSite\\obj\\",
+        "projectPath": "D:\\conestoga\\spring term\\dot net\\EventSite Group Project\\EventSite\\EventSite\\EventSite.csproj",
+        "packagesPath": "C:\\Users\\samee\\.nuget\\packages\\",
+        "outputPath": "D:\\conestoga\\spring term\\dot net\\EventSite Group Project\\EventSite\\EventSite\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\samee\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -86,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

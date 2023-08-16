@@ -9,141 +9,141 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = EventSite
 build_property.RootNamespace = EventSite
-build_property.ProjectDir = E:\Semster4\Advance Net\Project\EventSite\EventSite\
+build_property.ProjectDir = D:\conestoga\spring term\dot net\EventSite Group Project\EventSite\EventSite\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = E:\Semster4\Advance Net\Project\EventSite\EventSite
+build_property.MSBuildProjectDirectory = D:\conestoga\spring term\dot net\EventSite Group Project\EventSite\EventSite
 build_property._RazorSourceGeneratorDebug = 
 
-[E:/Semster4/Advance Net/Project/EventSite/EventSite/Areas/Admin/Views/Category/Category.cshtml]
+[D:/conestoga/spring term/dot net/EventSite Group Project/EventSite/EventSite/Areas/Admin/Views/Category/Category.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcQ2F0ZWdvcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Semster4/Advance Net/Project/EventSite/EventSite/Areas/Admin/Views/Category/Index.cshtml]
+[D:/conestoga/spring term/dot net/EventSite Group Project/EventSite/EventSite/Areas/Admin/Views/Category/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Semster4/Advance Net/Project/EventSite/EventSite/Areas/Admin/Views/Event/Event.cshtml]
+[D:/conestoga/spring term/dot net/EventSite Group Project/EventSite/EventSite/Areas/Admin/Views/Event/Event.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRXZlbnRcRXZlbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Semster4/Advance Net/Project/EventSite/EventSite/Areas/Admin/Views/Event/Index.cshtml]
+[D:/conestoga/spring term/dot net/EventSite Group Project/EventSite/EventSite/Areas/Admin/Views/Event/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRXZlbnRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Semster4/Advance Net/Project/EventSite/EventSite/Areas/Admin/Views/Event/SearchResults.cshtml]
+[D:/conestoga/spring term/dot net/EventSite Group Project/EventSite/EventSite/Areas/Admin/Views/Event/SearchResults.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRXZlbnRcU2VhcmNoUmVzdWx0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Semster4/Advance Net/Project/EventSite/EventSite/Areas/Admin/Views/Organizer/Index.cshtml]
+[D:/conestoga/spring term/dot net/EventSite Group Project/EventSite/EventSite/Areas/Admin/Views/Organizer/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcT3JnYW5pemVyXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Semster4/Advance Net/Project/EventSite/EventSite/Areas/Admin/Views/Organizer/Organizer.cshtml]
+[D:/conestoga/spring term/dot net/EventSite Group Project/EventSite/EventSite/Areas/Admin/Views/Organizer/Organizer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcT3JnYW5pemVyXE9yZ2FuaXplci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Semster4/Advance Net/Project/EventSite/EventSite/Areas/Admin/Views/Shared/_AdminLayout.cshtml]
+[D:/conestoga/spring term/dot net/EventSite Group Project/EventSite/EventSite/Areas/Admin/Views/Shared/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Semster4/Advance Net/Project/EventSite/EventSite/Areas/Admin/Views/_ViewImports.cshtml]
+[D:/conestoga/spring term/dot net/EventSite Group Project/EventSite/EventSite/Areas/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Semster4/Advance Net/Project/EventSite/EventSite/Areas/Admin/Views/_ViewStart.cshtml]
+[D:/conestoga/spring term/dot net/EventSite Group Project/EventSite/EventSite/Areas/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Semster4/Advance Net/Project/EventSite/EventSite/Views/Account/AccessDenied.cshtml]
+[D:/conestoga/spring term/dot net/EventSite Group Project/EventSite/EventSite/Views/Account/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Semster4/Advance Net/Project/EventSite/EventSite/Views/Account/Login.cshtml]
+[D:/conestoga/spring term/dot net/EventSite Group Project/EventSite/EventSite/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Semster4/Advance Net/Project/EventSite/EventSite/Views/Account/Register.cshtml]
+[D:/conestoga/spring term/dot net/EventSite Group Project/EventSite/EventSite/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Semster4/Advance Net/Project/EventSite/EventSite/Views/Cart/Checkout.cshtml]
+[D:/conestoga/spring term/dot net/EventSite Group Project/EventSite/EventSite/Views/Cart/Checkout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxDaGVja291dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Semster4/Advance Net/Project/EventSite/EventSite/Views/Cart/Edit.cshtml]
+[D:/conestoga/spring term/dot net/EventSite Group Project/EventSite/EventSite/Views/Cart/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Semster4/Advance Net/Project/EventSite/EventSite/Views/Cart/Index.cshtml]
+[D:/conestoga/spring term/dot net/EventSite Group Project/EventSite/EventSite/Views/Cart/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Semster4/Advance Net/Project/EventSite/EventSite/Views/Event/Details.cshtml]
+[D:/conestoga/spring term/dot net/EventSite Group Project/EventSite/EventSite/Views/Event/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Semster4/Advance Net/Project/EventSite/EventSite/Views/Event/List.cshtml]
+[D:/conestoga/spring term/dot net/EventSite Group Project/EventSite/EventSite/Views/Event/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Semster4/Advance Net/Project/EventSite/EventSite/Views/Home/Index.cshtml]
+[D:/conestoga/spring term/dot net/EventSite Group Project/EventSite/EventSite/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Semster4/Advance Net/Project/EventSite/EventSite/Views/order/Checkout.cshtml]
+[D:/conestoga/spring term/dot net/EventSite Group Project/EventSite/EventSite/Views/order/Checkout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncb3JkZXJcQ2hlY2tvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Semster4/Advance Net/Project/EventSite/EventSite/Views/order/OrderDetails.cshtml]
+[D:/conestoga/spring term/dot net/EventSite Group Project/EventSite/EventSite/Views/order/OrderDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncb3JkZXJcT3JkZXJEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Semster4/Advance Net/Project/EventSite/EventSite/Views/order/Orders.cshtml]
+[D:/conestoga/spring term/dot net/EventSite Group Project/EventSite/EventSite/Views/order/Orders.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncb3JkZXJcT3JkZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Semster4/Advance Net/Project/EventSite/EventSite/Views/Organizer/Details.cshtml]
+[D:/conestoga/spring term/dot net/EventSite Group Project/EventSite/EventSite/Views/Organizer/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JnYW5pemVyXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Semster4/Advance Net/Project/EventSite/EventSite/Views/Organizer/List.cshtml]
+[D:/conestoga/spring term/dot net/EventSite Group Project/EventSite/EventSite/Views/Organizer/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JnYW5pemVyXExpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Semster4/Advance Net/Project/EventSite/EventSite/Views/Shared/Components/Common/DropDown.cshtml]
+[D:/conestoga/spring term/dot net/EventSite Group Project/EventSite/EventSite/Views/Shared/Components/Common/DropDown.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ29tbW9uXERyb3BEb3duLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Semster4/Advance Net/Project/EventSite/EventSite/Views/Shared/_EventLinkPartial.cshtml]
+[D:/conestoga/spring term/dot net/EventSite Group Project/EventSite/EventSite/Views/Shared/_EventLinkPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9FdmVudExpbmtQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Semster4/Advance Net/Project/EventSite/EventSite/Views/Shared/_Layout.cshtml]
+[D:/conestoga/spring term/dot net/EventSite Group Project/EventSite/EventSite/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Semster4/Advance Net/Project/EventSite/EventSite/Views/Shared/_NavbarMenuButtonPartial.cshtml]
+[D:/conestoga/spring term/dot net/EventSite Group Project/EventSite/EventSite/Views/Shared/_NavbarMenuButtonPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9OYXZiYXJNZW51QnV0dG9uUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Semster4/Advance Net/Project/EventSite/EventSite/Views/Shared/_OrganizerLinkPartial.cshtml]
+[D:/conestoga/spring term/dot net/EventSite Group Project/EventSite/EventSite/Views/Shared/_OrganizerLinkPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Pcmdhbml6ZXJMaW5rUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Semster4/Advance Net/Project/EventSite/EventSite/Views/Shared/_PagingLinksPartial.cshtml]
+[D:/conestoga/spring term/dot net/EventSite Group Project/EventSite/EventSite/Views/Shared/_PagingLinksPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYWdpbmdMaW5rc1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Semster4/Advance Net/Project/EventSite/EventSite/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/conestoga/spring term/dot net/EventSite Group Project/EventSite/EventSite/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Semster4/Advance Net/Project/EventSite/EventSite/Views/_ViewImports.cshtml]
+[D:/conestoga/spring term/dot net/EventSite Group Project/EventSite/EventSite/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Semster4/Advance Net/Project/EventSite/EventSite/Views/_ViewStart.cshtml]
+[D:/conestoga/spring term/dot net/EventSite Group Project/EventSite/EventSite/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

@@ -1,71 +1,79 @@
 ﻿@model CheckoutViewModel
 
-<h2>Checkout</h2>
+<div class="container">
+    <h2 class="mt-4">Checkout</h2>
 
-<div class="order-summary">
-    <h3>Order Summary</h3>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Event</th>
-                <th>Quantity</th>
-                <th>Unit Price</th>
-                <th>Total Price</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model.OrderDetails)
-            {
-                <tr>
-                    <td>@item.Event.Title</td>
-                    <td>@item.Quantity</td>
-                    <td>@item.UnitPrice</td>
-                    <td>@(item.Quantity * item.UnitPrice)</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-    <p>Total: @Model.OrderTotal</p>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                <table class="table table-bordered">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>Event</th>
+                            <th>Quantity</th>
+                            <th>Unit Price</th>
+                            <th>Total Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.OrderDetails)
+                        {
+                            <tr>
+                                <td>@item.Event.Title</td>
+                                <td>@item.Quantity</td>
+                                <td>@item.UnitPrice.ToString("c")</td>
+                                <td>$@(item.Quantity * item.UnitPrice)</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <p class="total font-weight-bold">Total: @Model.OrderTotal.ToString("c")</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="shipping-address">
+                <h3>Shipping Address</h3>
+                <form asp-action="Checkout" method="post">
+                    <div class="form-group">
+                        <label for="FullName">Full Name</label>
+                        <input type="text" class="form-control" id="FullName" name="FullName" asp-for="FullName">
+                        <span asp-validation-for="FullName" class="text-danger"></span>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="AddressLine1">Address Line 1</label>
+                        <input type="text" class="form-control" id="AddressLine1" name="AddressLine1" asp-for="AddressLine1">
+                        <span asp-validation-for="AddressLine1" class="text-danger"></span>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="AddressLine2">Address Line 2</label>
+                        <input type="text" class="form-control" id="AddressLine2" name="AddressLine2" asp-for="AddressLine2">
+                    </div>
+                    <div class="form-group">
+                        <label for="City">City</label>
+                        <input type="text" class="form-control" id="City" name="City" asp-for="City">
+                        <span asp-validation-for="City" class="text-danger"></span>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="State">State</label>
+                        <input type="text" class="form-control" id="State" name="State" asp-for="State">
+                        <span asp-validation-for="State" class="text-danger"></span>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="PostalCode">Postal Code</label>
+                        <input type="text" class="form-control" id="PostalCode" name="PostalCode" asp-for="PostalCode">
+                        <span asp-validation-for="PostalCode" class="text-danger"></span>
+
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Place Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 
-<div class="shipping-address">
-    <h3>Shipping Address</h3>
-    <form asp-action="Checkout" method="post">
-        <div class="form-group">
-            <label for="FullName">Full Name</label>
-            <input type="text" class="form-control" id="FullName" name="FullName" asp-for="FullName" >
-            <span asp-validation-for="FullName" class="text-danger"></span>
-
-        </div>
-        <div class="form-group">
-            <label for="AddressLine1">Address Line 1</label>
-            <input type="text" class="form-control" id="AddressLine1" name="AddressLine1" asp-for="AddressLine1" >
-            <span asp-validation-for="AddressLine1" class="text-danger"></span>
-
-        </div>
-        <div class="form-group">
-            <label for="AddressLine2">Address Line 2</label>
-            <input type="text" class="form-control" id="AddressLine2" name="AddressLine2" asp-for="AddressLine2">
-        </div>
-        <div class="form-group">
-            <label for="City">City</label>
-            <input type="text" class="form-control" id="City" name="City" asp-for="City" >
-            <span asp-validation-for="City" class="text-danger"></span>
-
-        </div>
-        <div class="form-group">
-            <label for="State">State</label>
-            <input type="text" class="form-control" id="State" name="State" asp-for="State" >
-            <span asp-validation-for="State" class="text-danger"></span>
-
-        </div>
-        <div class="form-group">
-            <label for="PostalCode">Postal Code</label>
-            <input type="text" class="form-control" id="PostalCode" name="PostalCode" asp-for="PostalCode" >
-            <span asp-validation-for="PostalCode" class="text-danger"></span>
-
-        </div>
-      
-        <button type="submit" class="btn btn-primary">Place Order</button>
-    </form>
-</div>
